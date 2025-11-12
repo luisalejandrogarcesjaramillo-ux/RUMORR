@@ -1,0 +1,18 @@
+{
+  "id": "toro",
+  "title": "El Guardián",
+  "shortTitle": "TORO",
+  "description": "Una fuerza primordial, tallada en la quietud. Su presencia es inmutable, su poder se desata con la conexión.",
+  "narrative": [
+    { "title": "El Origen", "description": "En el silencio primordial, una chispa forjó al guardián." },
+    { "title": "La Vigilia", "description": "Sus ojos ven todo lo que ha sido y todo lo que será." },
+    { "title": "El Despertar", "description": "Tu interacción libera su fuerza latente." },
+    { "title": "La Conexión", "description": "Ahora, su poder es tuyo. Únete a su legado." }
+  ],
+  "gradient": {
+    "curiosity": "from-gray-900 via-black to-orange-900",
+    "discovery": "from-orange-900 via-red-900 to-yellow-900",
+    "connection": "from-yellow-900 via-amber-600 to-orange-600"
+  },
+  "emissiveColor": "#FFA500"
+}
