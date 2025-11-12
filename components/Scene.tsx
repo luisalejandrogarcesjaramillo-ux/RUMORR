@@ -1,5 +1,6 @@
 import { OrbitControls, Environment, ContactShadows } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import * as THREE from 'three'
 import { Suspense } from 'react'
 import EpicModel from './EpicModel'
 import { THREE_D_CONFIG } from '../src/config'

@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
-import { Suspense, memo, useEffect } from 'react';
+import { Suspense, memo, useEffect, version } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import * as THREE from 'three';
 import { Environment, OrbitControls, ContactShadows } from '@react-three/drei';
 import { DynamicModel } from './DynamicModel';
 import { NarrativeOverlay } from './NarrativeOverlay';
@@ -41,7 +42,7 @@ function SceneComponent() {
     <div className="relative w-screen h-screen overflow-hidden bg-black">
       <Canvas
         camera={{ position: [0, 0, 6], fov: 50 }}
-        shadows={{ type: 'PCFSoftShadowMap' }}
+        shadows={THREE.PCFSoftShadowMap}
         style={{ width: '100%', height: '100%' }}
       >
         <ambientLight intensity={0.2} />
