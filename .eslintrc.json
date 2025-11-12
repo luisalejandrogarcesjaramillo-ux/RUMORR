@@ -12,7 +12,8 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "prettier"
   ],
   "plugins": ["@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
@@ -26,8 +27,11 @@
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }
     ],
     "@typescript-eslint/no-explicit-any": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": "off",
+    "react-hooks/exhaustive-deps": "warn", // This is our "Déjà Vu" detector for dependency arrays
+    "no-console": [
+      "warn",
+      { "allow": ["warn", "error", "info"] }
+    ], // Standard console is a system vulnerability. Use a dedicated `systemTrace` logger.
     "prefer-const": "error",
     "no-var": "error",
     "eqeqeq": ["error", "smart"]

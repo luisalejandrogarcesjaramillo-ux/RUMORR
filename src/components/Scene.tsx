@@ -7,31 +7,32 @@ import { DynamicModel } from './DynamicModel';
 import { NarrativeOverlay } from './NarrativeOverlay';
 import { ProjectGallery } from './ProjectGallery';
 import { FloatingCTA } from './FloatingCTA';
-import { useExperienceState } from '@/hooks/useExperienceState';
+import { useExperienceState as useMatrix } from '@/hooks/useExperienceState'; // Alias for conceptual alignment
 
 /**
- * EtherealLoader: Un componente de carga visualmente atractivo que se muestra
- * mientras se obtiene el proyecto inicial.
+ * OracleSyncLoader: A visually distinct loading component, representing the system
+ * buffering reality while syncing with The Oracle.
  */
-const EtherealLoader = memo(() => (
+const OracleSyncLoader = memo(() => (
   <motion.div
     className="flex items-center justify-center w-full h-screen"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1, transition: { duration: 1.5, ease: 'easeInOut' } }}
     exit={{ opacity: 0, transition: { duration: 1, ease: 'easeOut' } }}
   >
-    <div className="text-white text-3xl font-extralight tracking-[0.5em]">RUMORR</div>
+    <div className="text-white text-3xl font-extralight tracking-[0.5em]">RUMOR.RED</div>
   </motion.div>
 ));
 
-EtherealLoader.displayName = 'EtherealLoader';
+OracleSyncLoader.displayName = 'OracleSyncLoader';
 
 /**
- * Main3DScene: Contiene exclusivamente los elementos de la escena 3D.
- * Se memoiza para evitar re-renders innecesarios cuando solo cambia el estado de la UI.
+ * SimulationCore: Contains the core 3D elements of the simulation (The Matrix).
+ * This component is memoized to prevent re-renders when only UI state changes,
+ * representing a stable layer of the simulated reality.
  */
 const Main3DScene = memo(() => {
-  const { dispatch } = useExperienceState();
+  const { dispatch } = useMatrix();
 
   return (
     <>
@@ -48,7 +49,7 @@ const Main3DScene = memo(() => {
 
       {/* --- MODELO Y ENTORNO --- */}
       <Suspense fallback={null}>
-        <DynamicModel onInteraction={() => dispatch({ type: 'INCREMENT_CLICK' })} />
+        <DynamicModel onInteraction={() => dispatch({ type: 'DETECT_USER_INTERACTION' })} />
         <Environment preset="sunset" background={false} />
       </Suspense>
 
@@ -61,19 +62,23 @@ const Main3DScene = memo(() => {
 
 Main3DScene.displayName = 'Main3DScene';
 
-function SceneComponent() {
-  const { state, dispatch, loadProject } = useExperienceState();
+/**
+ * TheMatrix: The main component that orchestrates the entire simulated experience,
+ * deciding whether to show the loading state (syncing) or the simulation itself.
+ */
+function TheMatrix() {
+  const { state, loadProject: loadSimulation } = useMatrix();
 
   useEffect(() => {
-    // Carga el proyecto inicial solo una vez al montar la escena.
+    // Initial connection to The Oracle to load the first simulation.
     if (!state.currentProject && !state.isLoading) {
-      void loadProject(state.currentProjectId);
+      void loadSimulation(state.currentProjectId);
     }
-  }, [loadProject, state.currentProject, state.isLoading, state.currentProjectId]);
+  }, [loadSimulation, state.currentProject, state.isLoading, state.currentProjectId]);
 
-  // Memorizamos las clases del gradiente para evitar recalcular en cada render.
-  const gradientClasses = useMemo(() => {
-    const projectGradient = state.currentProject?.gradient;
+  // The visual "hue" of the current simulation, derived from its state.
+  const simulationHues = useMemo(() => {
+    const projectGradient = state.currentProject?.gradient; // The "glitch" or "truth" color scheme
     if (!projectGradient) return 'from-gray-900 to-black';
     // Aseguramos que las clases se apliquen correctamente.
     return `${projectGradient[state.phase] || 'from-gray-900 to-black'}`;
@@ -83,12 +88,14 @@ function SceneComponent() {
     <MotionConfig transition={{ duration: 0.75, ease: 'easeInOut' }}>
       <div className="relative w-screen h-screen overflow-hidden bg-black">
         <AnimatePresence mode="wait">
+          {/* Is the user plugged in? Or are we syncing with reality? */}
           {!state.currentProject ? (
-            // Usamos el ID como key para asegurar que AnimatePresence detecte la salida.
+            // Awaiting sync with The Oracle.
             <motion.div key="loader">
-              <EtherealLoader />
+              <OracleSyncLoader />
             </motion.div>
           ) : (
+            // Rendering the Matrix simulation.
             <motion.div key="scene" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <Canvas
                 shadows
@@ -102,7 +109,7 @@ function SceneComponent() {
                 <Main3DScene />
               </Canvas>
               <div
-                className={`absolute inset-0 pointer-events-none transition-all duration-1000 bg-gradient-to-br ${gradientClasses}`}
+                className={`absolute inset-0 pointer-events-none transition-all duration-1000 bg-gradient-to-br ${simulationHues}`}
                 style={{ opacity: 0.3 }}
               />
               <ProjectGallery />
@@ -116,5 +123,5 @@ function SceneComponent() {
   );
 }
 
-export const Scene = memo(SceneComponent);
+export const Scene = memo(TheMatrix);
 Scene.displayName = 'Scene';
