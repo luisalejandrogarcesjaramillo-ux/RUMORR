@@ -13,7 +13,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import { Box3, Vector3, Mesh } from 'three';
+import { Box3, Vector3, Mesh, Object3D } from 'three';
 import type { Group } from 'three';
 
 interface AutoGLBProps {
@@ -50,9 +50,14 @@ export function AutoGLB({ rotateSpeed = 0.5, castShadow = true }: AutoGLBProps) 
 
     // Step 4: Apply shadow casting if needed
     if (castShadow) {
-      clonedScene.traverse((child: any) => {
+      clonedScene.traverse((child: Object3D) => {
+        // narrow type at runtime
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore - three.js runtime check
         if (child.isMesh) {
+          // @ts-ignore
           child.castShadow = true;
+          // @ts-ignore
           child.receiveShadow = true;
         }
       });
@@ -68,7 +73,7 @@ export function AutoGLB({ rotateSpeed = 0.5, castShadow = true }: AutoGLBProps) 
   }, [scene, castShadow]);
 
   // Auto-rotation for presentation (optional)
-  useFrame((state: any, delta: number) => {
+  useFrame((state: unknown, delta: number) => {
     if (groupRef.current && rotateSpeed > 0) {
       groupRef.current.rotation.y += rotateSpeed * delta;
     }

@@ -1,9 +1,9 @@
-# 📊 RUMORR MVP — Executive Summary
+# 📊 RUMOR.RED – Resumen Ejecutivo (El Informe del Oráculo)
 
-**Project:** Interactive 3D lead-capture MVP  
-**Timeline:** 8 hours (1 day sprint)  
-**Status:** ✅ Scaffold ready → Start H1 now  
-**Target Outcome:** Live MVP + 80–140 qualified leads by end of Day 1
+**Proyecto:** Prototipo inmersivo 3D para la captura de "desconectados".
+**Cronograma:** Sprint de 1 día (8 horas).
+**Estado:** ✅ Arquitectura base lista para la fase de ejecución.
+**Resultado Objetivo:** MVP en vivo + 80–140 "desconectados" cualificados al final del Día 1.
 
 ---
 
@@ -23,7 +23,7 @@
 
 ---
 
-## 📈 **8-Hour Sprint: What You're Building**
+## 📈 **Sprint de 8 Horas: Construyendo la Matrix**
 
 | Hour | What | Duration |
 |------|------|----------|
@@ -39,32 +39,32 @@
 
 ---
 
-## 🛠️ **Tech Stack**
+## 🛠️ **Stack Tecnológico: Los Componentes de la Simulación**
 
 | Layer | Choice | Why |
 |-------|--------|-----|
 | **Frontend** | Next.js 14 + TypeScript | Fast iteration, Vercel deploy native |
 | **3D** | React Three Fiber (@react-three/drei) | Thin wrapper on Three.js, React-friendly |
 | **UI** | Tailwind CSS | Quick styling, responsive |
-| **Storage** | `data/leads.json` (local) | MVP only; upgrade to DB later |
+| **Storage** | `data/leads.json` (local, MVP) | Actualización a Supabase (PostgreSQL) en progreso. |
 | **Deploy** | Vercel | Zero config, free tier, perfect for MVP |
-| **Analytics** | Manual (anonId + event queue) | No external dependencies, 100% data control |
+| **Analytics** | Manual (anonId + event queue) | Plan para integrar Plausible/Posthog. |
 
 ---
 
 ## 💾 **Data Model (Leads)**
-
+### El Registro de los "Desconectados"
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "Neo",
+  "email": "neo@rumor.red",
   "anonId": "a_abc123xyz",
   "clicks": 5,
   "timeOnScene": 63,
   "utm": {
     "source": "twitter",
     "medium": "social",
-    "campaign": "mvp_launch"
+    "campaign": "red_pill_launch"
   },
   "_receivedAt": "2025-11-11T12:34:56Z"
 }
@@ -76,7 +76,7 @@
 
 ---
 
-## 🎲 **Expected Outcomes (Day 8)**
+## 🎲 **Resultados Esperados (Día 8): La Verdad Revelada**
 
 ### **Conservative** (baseline, no issues)
 - 📊 100–150 visitors (from 1–2 channels)
@@ -101,7 +101,7 @@
 
 ---
 
-## 📋 **Decisions: What to Track**
+## 📋 **Decisiones: El Camino a Seguir**
 
 After Day 8, you'll make one of three decisions:
 
@@ -118,7 +118,7 @@ After Day 8, you'll make one of three decisions:
 
 ---
 
-## 💰 **CAC Projection (If Scaling)**
+## 💰 **Proyección de CAC (Si se Escala la Verdad)**
 
 Assuming best-case (80 leads, Day 8):
 
@@ -132,7 +132,7 @@ Assuming best-case (80 leads, Day 8):
 
 ---
 
-## ✨ **Why This Matters (Your Moat)**
+## ✨ **Por Qué Esto Importa (Tu Ventaja en la Matrix)**
 
 1. **Credibility:** Interactive 3D experience signals sophistication → attracts serious founders
 2. **Differentiation:** 95% of landing pages are static text/video. Yours is interactive.
@@ -141,7 +141,7 @@ Assuming best-case (80 leads, Day 8):
 
 ---
 
-## 🚀 **Next 48 Hours (Post-MVP)**
+## 🚀 **Próximas 48 Horas (Post-MVP): La Evolución de la Realidad**
 
 | Milestone | Action | Time |
 |-----------|--------|------|
@@ -152,7 +152,7 @@ Assuming best-case (80 leads, Day 8):
 
 ---
 
-## ⚠️ **Critical Reminders**
+## ⚠️ **Recordatorios Críticos (Advertencias del Oráculo)**
 
 1. **Don't perfectionism.** If it works, ship it. Polish later.
 2. **Test on mobile first** (50% of traffic will be mobile).
@@ -162,7 +162,7 @@ Assuming best-case (80 leads, Day 8):
 
 ---
 
-## 📞 **Support References**
+## 📞 **Referencias de Soporte (El Manual del Operador)**
 
 - **React Three Fiber docs:** https://docs.pmnd.rs/react-three-fiber
 - **Three.js docs:** https://threejs.org/docs/
@@ -172,7 +172,7 @@ Assuming best-case (80 leads, Day 8):
 
 ---
 
-## 🎯 **End of Day 8: Success Looks Like**
+## 🎯 **Fin del Día 8: El Éxito de la Simulación**
 
 ✅ Live URL on Vercel (e.g., `rumorr-mvp.vercel.app`)  
 ✅ Interactive 3D model rendering smoothly  

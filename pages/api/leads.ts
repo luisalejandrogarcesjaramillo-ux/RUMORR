@@ -1,68 +1,37 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-import type { Lead, APIResponse } from '../../src/types'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { supabase } from '../../src/lib/supabase'; // Asumiendo que crearás este archivo
+import { LeadSchema, APIResponse } from '../../src/types';
 
-const DATA_PATH = path.join(process.cwd(), 'data', 'leads.json')
-
-interface LeadWithTimestamp extends Lead {
-  _receivedAt: string
-}
-
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<APIResponse>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ success: false, error: 'Method not allowed' })
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).json({ success: false, error: `Method ${req.method} Not Allowed` });
   }
 
   try {
-    const body = req.body as Lead
+    const validation = LeadSchema.safeParse(req.body);
 
-    // Validate required fields
-    if (!body.email || !body.name || !body.anonId) {
-      return res.status(400).json({
-        success: false,
-        error: 'Missing required fields: email, name, anonId',
-      })
+    if (!validation.success) {
+      return res.status(400).json({ success: false, error: validation.error.issues[0].message });
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(body.email)) {
-      return res.status(400).json({
-        success: false,
-        error: 'Invalid email format',
-      })
+    const { error } = await supabase.from('leads').insert([validation.data]);
+
+    if (error) {
+      // Código de error para violación de constraint de unicidad en PostgreSQL
+      if (error.code === '23505') {
+        return res.status(409).json({ success: false, error: 'Email already exists' });
+      }
+      throw error;
     }
 
-    const now = new Date().toISOString()
-    const entry: LeadWithTimestamp = {
-      ...body,
-      _receivedAt: now,
-    }
-
-    let arr: LeadWithTimestamp[] = []
-    try {
-      const raw = fs.readFileSync(DATA_PATH, 'utf-8')
-      arr = JSON.parse(raw || '[]')
-    } catch (e) {
-      arr = []
-    }
-
-    arr.push(entry)
-    fs.writeFileSync(DATA_PATH, JSON.stringify(arr, null, 2))
-
-    return res.status(201).json({
-      success: true,
-      data: entry,
-    })
+    return res.status(201).json({ success: true, data: { message: 'Lead created successfully' } });
   } catch (e) {
-    console.error('Error saving lead:', e)
-    return res.status(500).json({
-      success: false,
-      error: 'Failed to save lead',
-    })
+    const error = e instanceof Error ? e.message : 'An unknown error occurred';
+    console.error('Error in /api/leads:', error);
+    return res.status(500).json({ success: false, error: 'Internal Server Error' });
   }
 }

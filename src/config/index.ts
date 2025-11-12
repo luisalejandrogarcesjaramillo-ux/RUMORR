@@ -1,5 +1,7 @@
 // src/config/index.ts
 // Centralized configuration - single source of truth for URLs, strings, animation values
+import { cubicBezier } from 'framer-motion';
+import { THEME_COLOR } from './seo';
 
 export const API_ENDPOINTS = {
   LEADS: '/api/leads',
@@ -7,23 +9,24 @@ export const API_ENDPOINTS = {
 }
 
 export const UI_STRINGS = {
-  HERO_TITLE: 'Rumorr',
-  HERO_SUBTITLE: 'Un viaje interactivo 3D',
-  CTA_BUTTON: 'Contacto',
-  FORM_TITLE: 'Déjanos tus datos',
-  FORM_NAME_PLACEHOLDER: 'Nombre',
-  FORM_EMAIL_PLACEHOLDER: 'Email',
-  FORM_SEND_BUTTON: 'Enviar',
-  FORM_SENDING: 'Enviando...',
-  FORM_CLOSE_BUTTON: 'Cerrar',
-  FORM_SUCCESS: '¡Gracias! Te contactaré pronto.',
-  FORM_ERROR: 'Error. Intenta de nuevo.',
-  MODEL_LOADING: 'Cargando 3D...',
+  HERO_TITLE: 'RUMOR.RED',
+  HERO_SUBTITLE: 'Una experiencia para despertar.',
+  CTA_BUTTON: 'Desconectar',
+  FORM_TITLE: 'Cruza el Umbral',
+  FORM_NAME_PLACEHOLDER: 'Tu Identidad',
+  FORM_EMAIL_PLACEHOLDER: 'Tu Conexión',
+  FORM_SEND_BUTTON: 'Ofrecer Valor',
+  FORM_SENDING: 'Sincronizando...',
+  FORM_CLOSE_BUTTON: 'Volver a la Simulación',
+  FORM_SUCCESS: 'El Oráculo ha recibido tu eco. Espera la señal.',
+  FORM_ERROR: 'La señal se ha perdido. Inténtalo de nuevo.',
+  MODEL_LOADING: 'Materializando la realidad...',
 }
 
 export const ANIMATION_CONFIG = {
   MODAL_SPRING: { stiffness: 300, damping: 25 },
-  BUTTON_HOVER_SCALE: 1.05,
+  BUTTON_HOVER_SCALE: 1.05, // Escala sutil para micro-validación (Bernays)
+  MOTION_CURVES: [0.65, 0, 0.35, 1], // Custom cubic-bezier para continuidad y calma (Gestalt)
   BUTTON_CLICK_DURATION: 1500, // ms
 }
 
@@ -42,4 +45,8 @@ export const THREE_D_CONFIG = {
   MODEL_SCALE_DEFAULT: [1, 1, 1],
   ORBIT_CONTROLS_MIN_DISTANCE: 2,
   ORBIT_CONTROLS_MAX_DISTANCE: 10,
+};
+
+export { THEME_COLOR };
+
 }

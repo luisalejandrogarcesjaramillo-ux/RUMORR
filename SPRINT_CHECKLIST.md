@@ -1,26 +1,26 @@
-# 🚀 RUMORR MVP — 8-Hour Sprint Checklist & Projection
+# 🚀 RUMOR.RED – Hoja de Ruta del Sprint (Construyendo la Matrix)
 
-**Start Time:** NOW (Nov 11, 2025)  
-**Scaffold Status:** ✅ READY (`npm run dev` launched)  
-**Target:** Live URL + leads dataset by H8
+**Hora de Inicio:** AHORA (Nov 12, 2025)
+**Estado del Andamiaje:** ✅ LISTO (`npm run dev` lanzado)
+**Objetivo:** URL en vivo + base de datos de "desconectados" al final del sprint.
 
 ---
 
-## ⏱️ HOURLY BREAKDOWN
+## ⏱️ DESGLOSE HORARIO (El Protocolo de Construcción)
 
-### **H0 (NOW): Verify Setup**
+### **H0 (AHORA): Verificación del Sistema**
 - [ ] `npm run dev` running → http://localhost:3000 accessible
-- [ ] Scene renders (purple torusKnot placeholder visible)
-- [ ] LeadModal button appears (bottom-right)
-- [ ] Form sends data to `/api/leads` (check terminal or data/leads.json)
+- [ ] La `Scene` (Matrix) se renderiza (modelo 3D `TORO.glb` visible con iluminación cinematográfica).
+- [ ] El botón de `LeadModal` ("Desconexión") aparece (abajo a la derecha).
+- [ ] El formulario envía datos a `/api/leads` (verifica en la terminal o `data/leads.json`).
 
-**Expected Outcome:** Green light to proceed. No blockers. ✅
+**Resultado Esperado:** Luz verde para proceder. Sin bloqueos. ✅
 
 ---
+## **I. FASE DE INMERSIÓN — LA GESTALT DEL OBJETO**
+## **HORA 1 (0:00–1:00): Integración del Artefacto 3D (TORO.glb)**
 
-## **HOUR 1 (0:00–1:00): Replace 3D Model + Scale**
-
-**Goal:** Get YOUR model on screen, not a placeholder.
+**Objetivo:** Asegurar que el modelo `TORO.glb` se muestre correctamente y se integre en la `Scene`.
 
 ### Checklist:
 - [ ] **Copy your `.glb` file** to `public/models/glb/TORO.glb`
@@ -38,10 +38,10 @@
 **Blockers to Watch:** GLTF parse errors, File too large (>5MB → compress DRACO later)
 
 **Success Criteria:**
-- ✅ Model renders cleanly
-- ✅ Auto-rotates (OrbitControls)
-- ✅ No console errors
-
+*   ✅ El modelo se renderiza limpiamente, respetando la **Continuidad** visual.
+*   ✅ Rota automáticamente (OrbitControls), permitiendo la **Exploración** sin fricción.
+*   ✅ No hay errores en la consola, manteniendo la **Integridad Perceptual**.
+*   ✅ El modelo ocupa aproximadamente el 60% del lienzo, logrando una **Proximidad** equilibrada con el entorno.
 ---
 
 ## **HOUR 2 (1:00–2:00): Lighting + Environment**
@@ -69,9 +69,9 @@
 **Estimated Effort:** 45 min  
 **Success Criteria:**
 - ✅ Model looks 3D with depth
-- ✅ Shadows present and realistic
-- ✅ Overall mood: cinematic, not flat
-
+*   ✅ El modelo presenta profundidad 3D, potenciando la **Figura/Fondo**.
+*   ✅ Las sombras son realistas, anclando el objeto en el espacio y reforzando la **Continuidad**.
+*   ✅ El ambiente general es cinematográfico, no plano, creando una **Autoridad Estética**.
 ---
 
 ## **HOUR 3 (2:00–3:00): Materials + Post-Processing**
@@ -95,9 +95,9 @@
 **Estimated Effort:** 45 min  
 **Success Criteria:**
 - ✅ Model glows subtly with bloom
-- ✅ Materials look polished
-- ✅ FPS stable > 45 on desktop
-
+*   ✅ El modelo brilla sutilmente con bloom, añadiendo un toque de **Misterio como Magnetismo**.
+*   ✅ Los materiales tienen un aspecto pulido, contribuyendo a la **Autoridad Estética**.
+*   ✅ FPS estable > 45 en escritorio, asegurando una **Continuidad** fluida.
 ---
 
 ## **HOUR 4 (3:00–4:00): Interaction + Microfeedback**
@@ -128,10 +128,10 @@
 **Estimated Effort:** 60 min  
 **Success Criteria:**
 - ✅ Visual feedback on hover
-- ✅ Animation on click (smooth, not jarring)
-- ✅ Events POST to API and appear in `data/leads.json`
-- ✅ No lag on rapid clicks
-
+*   ✅ Retroalimentación visual al pasar el ratón, fomentando la **Participación**.
+*   ✅ Animación al hacer clic (suave, no brusca), manteniendo la **Continuidad**.
+*   ✅ Los eventos se envían a la API y aparecen en `data/leads.json`, validando la **Micro-validación**.
+*   ✅ No hay retrasos en clics rápidos, asegurando una **Experiencia Fluida**.
 ---
 
 ## **HOUR 5 (4:00–5:00): Narrative + UI Polish**
@@ -163,10 +163,10 @@
 **Estimated Effort:** 60 min  
 **Success Criteria:**
 - ✅ Modal text aligns with product story
-- ✅ UI feels premium (no placeholder vibes)
-- ✅ Modal triggers at right time (not too early, not too late)
-- ✅ Form UX is smooth
-
+*   ✅ El texto del modal se alinea con la historia del producto, reforzando la **Narrativa y el Significado**.
+*   ✅ La UI se siente premium (sin vibraciones de marcador de posición), contribuyendo a la **Autoridad Estética**.
+*   ✅ El modal se activa en el momento adecuado (ni demasiado pronto, ni demasiado tarde), optimizando la **Expercepción del Usuario**.
+*   ✅ La UX del formulario es fluida, manteniendo la **Continuidad** de la interacción.
 ---
 
 ## **HOUR 6 (5:00–6:00): Lead Capture + Analytics**
@@ -206,10 +206,10 @@
 **Estimated Effort:** 45 min  
 **Success Criteria:**
 - ✅ Leads write to `data/leads.json` cleanly (valid JSON)
-- ✅ anonId persists across page reloads
-- ✅ Every field captured (name, email, anonId, timestamp)
-- ✅ No API errors (500s or 405s in console)
-
+*   ✅ Los leads se escriben en `data/leads.json` limpiamente (JSON válido), asegurando la **Integridad de los Datos**.
+*   ✅ `anonId` persiste entre recargas de página, manteniendo la **Continuidad** de la identidad.
+*   ✅ Cada campo capturado (nombre, email, anonId, timestamp), para una **Analítica Completa**.
+*   ✅ No hay errores de API (500s o 405s en la consola), garantizando la **Fiabilidad del Sistema**.
 ---
 
 ## **HOUR 7 (6:00–7:00): Optimization + Mobile**
@@ -243,10 +243,10 @@
 **Estimated Effort:** 45 min  
 **Success Criteria:**
 - ✅ Desktop FPS > 50, Mobile FPS > 30
-- ✅ Model loads in <3 seconds
-- ✅ No layout shift
-- ✅ Lighthouse score > 80
-
+*   ✅ FPS de escritorio > 50, FPS móvil > 30, garantizando la **Fluidez y Continuidad**.
+*   ✅ El modelo carga en <3 segundos, manteniendo la **Inmediatez Perceptual**.
+*   ✅ No hay cambios de diseño, asegurando la **Estabilidad Visual**.
+*   ✅ Puntuación de Lighthouse > 80, validando la **Optimización General**.
 ---
 
 ## **HOUR 8 (7:00–8:00): Deploy to Vercel**
@@ -280,10 +280,10 @@
 **Estimated Effort:** 45 min  
 **Success Criteria:**
 - ✅ Live URL works (no 500 errors)
-- ✅ Can submit form from live URL
-- ✅ Leads saved to `data/leads.json` (on GitHub)
-- ✅ <2s load time on desktop
-
+*   ✅ La URL en vivo funciona (sin errores 500), confirmando la **Disponibilidad del Sistema**.
+*   ✅ Se puede enviar el formulario desde la URL en vivo, validando la **Interacción Completa**.
+*   ✅ Los leads se guardan en `data/leads.json` (en GitHub), asegurando la **Captura de Datos**.
+*   ✅ Tiempo de carga <2s en escritorio, manteniendo la **Velocidad de Acceso**.
 ---
 
 ## 📊 **PROJECTION: Expected Outcomes**

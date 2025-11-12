@@ -1,11 +1,16 @@
-# 🎬 RUMORR MVP — START HERE (H1 ✅ → H2 🚀)
+# 🎬 RUMOR.RED – INICIO DE LA SIMULACIÓN
 
-## ⏰ **Quick Start (2 minutes)**
+## ⏰ **Inicio Rápido (2 minutos)**
 
 ```bash
-cd c:\Users\assi\Desktop\RUMORR
+# Asegúrate de estar en la carpeta raíz del proyecto
+# cd c:\Users\assi\Desktop\RUMORR
+
+# Instala las dependencias (sincronizando con el Oráculo)
+npm install
+
+# Inicia el entorno de desarrollo (La Matrix en modo debug)
 npm run dev
-# → http://localhost:3000 ✅
 ```
 
 **Expected:** 3D model (TORO) with **cinematic lighting**, rotatable, "Contacto" button works.

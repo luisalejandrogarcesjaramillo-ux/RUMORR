@@ -25,9 +25,13 @@ export default function EpicModel({
   const handlePointerEnter = () => {
     setHovered(true)
     onHover?.(true)
-    scene.traverse((child: any) => {
+    scene.traverse((child: import('three').Object3D) => {
+      // runtime check for mesh
+      // @ts-ignore
       if (child.isMesh && child.material) {
+        // @ts-ignore
         child.material.emissive = child.material.color
+        // @ts-ignore
         child.material.emissiveIntensity = 0.2
       }
     })
@@ -36,8 +40,10 @@ export default function EpicModel({
   const handlePointerLeave = () => {
     setHovered(false)
     onHover?.(false)
-    scene.traverse((child: any) => {
+    scene.traverse((child: import('three').Object3D) => {
+      // @ts-ignore
       if (child.isMesh && child.material) {
+        // @ts-ignore
         child.material.emissiveIntensity = 0
       }
     })

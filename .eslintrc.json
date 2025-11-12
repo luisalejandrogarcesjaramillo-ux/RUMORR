@@ -27,7 +27,7 @@
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }
     ],
     "@typescript-eslint/no-explicit-any": "error",
-    "react-hooks/exhaustive-deps": "warn", // This is our "Déjà Vu" detector for dependency arrays
+    "react-hooks/exhaustive-deps": "warn", // Este es nuestro detector de "Déjà Vu" para arrays de dependencias
     "no-console": [
       "warn",
       { "allow": ["warn", "error", "info"] }

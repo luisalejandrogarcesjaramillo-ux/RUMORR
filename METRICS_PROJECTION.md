@@ -1,8 +1,8 @@
-# 📈 RUMORR MVP — Metrics & Growth Projection
+# 📈 RUMOR.RED – Proyección de Métricas y Crecimiento (El Impacto en la Realidad)
 
-**Date:** Nov 11, 2025  
-**Horizon:** 8-hour sprint + 7-day post-MVP validation  
-**Assumption:** Launching to warm audience (community, Twitter, Discord)
+**Fecha:** Nov 11, 2025
+**Horizonte:** Sprint de 8 horas + 7 días de validación post-MVP
+**Suposición:** Lanzamiento a una audiencia cálida (comunidad, Twitter, Discord)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ---
 
-## 📊 **Phase 2: 24-Hour Warm Launch (H8 + 24h)**
+## 📊 **Fase 2: Lanzamiento "Red Pill" (H8 + 24h)**
 
 ### **Assumption: 3 Distribution Channels**
 - **Channel 1 (Primary):** Your Twitter / Discord (warm audience)
@@ -48,7 +48,7 @@
 
 ---
 
-## 💰 **Phase 3: 7-Day Validation (Days 2–8)**
+## 💰 **Fase 3: Validación de la Realidad (Días 2–8)**
 
 ### **Growth Assumptions**
 - **Day 1 (Launch):** Peak traffic → 300–500 users
@@ -66,7 +66,7 @@
 
 ### **Engagement Breakdown (Day 8 Sample)**
 
-For every 100 leads captured:
+Por cada 100 "desconectados" capturados:
 - **Time-on-scene:** 35–65 sec (median)
 - **Avg clicks/user:** 4–8 (median)
 - **Hover interactions:** 70–80% of visitors
@@ -74,7 +74,7 @@ For every 100 leads captured:
 
 ---
 
-## 🚀 **Phase 4: Scaling (Days 9–30)**
+## 🚀 **Fase 4: Escalando la Verdad (Días 9–30)**
 
 ### **Hypothesis: If Day 8 metrics are positive...**
 
@@ -142,7 +142,7 @@ For every 100 leads captured:
 
 ---
 
-## 📉 **Risk Factors & Mitigations**
+## 📉 **Factores de Riesgo y Mitigaciones (Glitches Potenciales)**
 
 | Risk | Impact | Mitigation |
 |------|--------|-----------|
@@ -154,7 +154,7 @@ For every 100 leads captured:
 
 ---
 
-## ✨ **Quick Wins (Double Lead Rate)**
+## ✨ **Victorias Rápidas (Duplicando la Tasa de Desconexión)**
 
 If by Day 2 you're getting 15 leads/day but want 30+, try:
 
@@ -166,7 +166,7 @@ If by Day 2 you're getting 15 leads/day but want 30+, try:
 
 ---
 
-## 🔮 **LLM-Era Insight: Why This Works**
+## 🔮 **Insight de la Era LLM: Por Qué Funciona RUMOR.RED**
 
 Your 3D interactive experience **combats AI fatigue:**
 - Text-only prompts → ubiquitous (ChatGPT, Claude, etc.)
@@ -182,7 +182,7 @@ This makes your MVP a **lead magnet with high-intent filtering built-in.**
 
 ---
 
-## 📞 **After Day 8: Next Steps**
+## 📞 **Después del Día 8: Próximos Pasos (Evolución del Oráculo)**
 
 1. **Export data:** `data/leads.json` → CSV → import to CRM (Pipedrive, HubSpot)
 2. **Segment leads:** High engagement (>50 clicks) vs. low (<5 clicks) → different email sequences
@@ -192,7 +192,6 @@ This makes your MVP a **lead magnet with high-intent filtering built-in.**
 
 ---
 
-**TL;DR:**  
-By end of **Day 8**, expect **80–140 qualified leads**. Use that data to decide: scale paid, iterate on messaging, or pivot the offering. The MVP proves the concept; the next 30 days prove the market.
+**TL;DR:** Al final del **Día 8**, espera **80–140 "desconectados" cualificados**. Usa esos datos para decidir: escalar la inversión, iterar el mensaje o pivotar la oferta. El MVP prueba el concepto; los próximos 30 días prueban el mercado.
 
 **Let's validate this! 🚀**

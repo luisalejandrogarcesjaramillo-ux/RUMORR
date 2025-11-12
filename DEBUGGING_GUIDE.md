@@ -1,6 +1,6 @@
-# RUMORR – Manual de Revisión y Debugging
+# RUMOR.RED – Manual de Revisión y Debugging (Detectando Glitches en la Matrix)
 
-## 🧭 Filosofía del Detective Digital
+## 🧭 Filosofía del Detective Digital (Agente de la Verdad)
 
 En RUMORR, cada error es una **pista para restaurar la experiencia icónica**. No "arreglamos código", **restauramos un universo**. Adopta la mentalidad de un detective que sigue un rastro de evidencias hasta la verdad.
 
@@ -20,12 +20,10 @@ Sé ultra-específico. Evita "no funciona" y describe exactamente qué ves:
 ### **Paso 2: Aislar el Área**
 
 Usa la arquitectura modular para localizar el problema:
-
-- **¿Es un problema de 3D?** → Revisa `DynamicModel.tsx`, `useGLTF`, archivo `.glb`
-- **¿Es Estado/UX?** → Revisa `useProjectState.ts`, `NarrativeOverlay.tsx`
-- **¿Es Estado/UX?** → Revisa `useExperienceState.ts`, `NarrativeOverlay.tsx`
-- **¿Es API/Datos?** → Revisa `/api/leads.ts`, `useAnalytics.ts`
-- **¿Es Build/Deploy?** → Revisa `next.config.js`, logs de Vercel
+- **¿Es un Glitch en la Simulación (3D)?** → Revisa `DynamicModel.tsx`, `useGLTF`, archivo `.glb`
+- **¿Es un Fallo en el Estado de la Matrix (UX)?** → Revisa `useExperienceState.ts` (y los componentes que usan `useSelector`).
+- **¿Es un Problema con el Oráculo (API/Datos)?** → Revisa `/api/leads.ts`, `useAnalytics.ts`
+- **¿Es un Fallo en el Despliegue (Build/Deploy)?** → Revisa `next.config.js`, logs de Vercel
 
 ### **Paso 3: Consultar Herramientas**
 
@@ -38,8 +36,8 @@ Usa la arquitectura modular para localizar el problema:
    - ¿La petición POST a `/api/leads` devuelve éxito?
 
 3. **React DevTools**
-   - Inspecciona estado: ¿El contexto de `useExperienceState` tiene el `currentProject` correcto?
-   - ¿Las props de componentes tienen valores esperados?
+   - Inspecciona el estado en el `ExperienceProvider`: ¿Tiene el `currentProject` correcto?
+   - ¿Los selectores (`useSelector`) devuelven los valores esperados?
 
 4. **Performance (F12 → Performance)**
    - Graba una interacción, busca picos en "Scripting" o "Rendering"
@@ -53,20 +51,19 @@ Usa la arquitectura modular para localizar el problema:
 ### **Paso 4: Formular Hipótesis**
 
 Basado en los datos recopilados, crea una teoría:
-
 ```
-Hipótesis: "El contador de clics se incrementa (confirmado en React DevTools),
+Hipótesis: "El contador de interacciones (`INCREMENT_CLICK`) se registra (confirmado en React DevTools),
 pero NarrativeOverlay no se re-renderiza porque está dentro de AnimatePresence
-y la key no está cambiando correctamente."
+y la `key` no está cambiando correctamente, creando un 'glitch' visual."
 ```
 
 ### **Paso 5: Probar y Verificar**
 
 Diseña un experimento simple:
-
 ```typescript
-// Añade este console.log en NarrativeOverlay.tsx
-console.log('NarrativeOverlay renderizado con step:', step);
+// Añade este console.log dentro del componente NarrativeOverlay
+const clickCount = useSelector(state => state.clickCount);
+console.log('NarrativeOverlay renderizado con clickCount:', clickCount);
 
 // Si el log aparece → el componente se re-renderiza
 // Si NO aparece → el componente no se actualiza (confirma hipótesis)
@@ -76,12 +73,13 @@ console.log('NarrativeOverlay renderizado con step:', step);
 
 Aplica la solución mínima y documenta el "porqué":
 
-```typescript
-// ANTES (problema)
-return <AnimatePresence>{step === 3 ? <CTA /> : null}</AnimatePresence>;
+```tsx
+// ANTES (posible problema)
+return <AnimatePresence>{isNarrativeComplete ? <CTA /> : null}</AnimatePresence>;
 
 // DESPUÉS (solución)
 // Se añadió key="cta" para que AnimatePresence detecte cambios
+// y mode="wait" para una transición más limpia.
 return (
   <AnimatePresence mode="wait">
     {step === 3 && <CTA key="cta" />}

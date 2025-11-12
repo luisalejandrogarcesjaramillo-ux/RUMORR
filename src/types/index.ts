@@ -1,27 +1,35 @@
-// src/types/index.ts
-// Single source of truth for all data contracts
+import { z } from 'zod';
 
-export interface Lead {
-  id?: string // ID único del lead (generado en backend)
-  email: string
-  name: string
-  anonId: string
-  timestamp?: string // ISO 8601 string
-  utm_source?: string
-  utm_medium?: string
-  clicks?: number
-  timeOnScene?: number
-}
+export const LeadSchema = z.object({
+  email: z.string().email({ message: 'Invalid email format' }),
+  name: z.string().min(1, { message: 'Name is required' }),
+  anonId: z.string().min(1, { message: 'Anonymous ID is required' }),
+});
+
+export type Lead = z.infer<typeof LeadSchema>;
 
 export interface InteractionEvent {
   anonId: string
   eventType: 'hover' | 'click' | 'form_submit'
   timestamp: number
-  metadata?: { [key: string]: any }
+  metadata?: Record<string, unknown>
 }
 
-export interface APIResponse<T = any> {
+export interface APIResponse<T = unknown> {
   success: boolean
   data?: T
   error?: string
 }
+
+// Artefacto: core domain model for objects that orbit inside the Templo/Templo UI
+export type AuraColor = 'primary' | 'secondary' | 'accent';
+
+export interface Artefacto {
+  id: string;
+  name: string;
+  essay: string;
+  globalRelevance: number; // determines scale/brightness in the scene (0-10)
+  auraColor: AuraColor;
+}
+
+export type Artefactos = Artefacto[];

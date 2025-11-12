@@ -1,6 +1,6 @@
-# RUMORR – Diagrama Operativo y Flujo de Deploy
+# RUMOR.RED – Protocolo de Transmisión y Flujo de Despliegue
 
-## 1️⃣ Arquitectura General y Flujo de Componentes
+## 1️⃣ Arquitectura General y Flujo de la Simulación
 
 ```mermaid
 flowchart TD

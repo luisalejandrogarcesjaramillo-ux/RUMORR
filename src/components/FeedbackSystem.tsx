@@ -8,6 +8,12 @@ export interface FeedbackMessage {
   duration?: number;
 }
 
+declare global {
+  interface Window {
+    showFeedback?: (message: Omit<FeedbackMessage, 'id'>) => void;
+  }
+}
+
 export function FeedbackSystem() {
   const [messages, setMessages] = useState<FeedbackMessage[]>([]);
 
@@ -24,7 +30,7 @@ export function FeedbackSystem() {
 
   // Guardar función globalmente para acceso desde otros componentes
   if (typeof window !== 'undefined') {
-    (window as any).showFeedback = addMessage;
+    window.showFeedback = addMessage;
   }
 
   return (
@@ -52,8 +58,8 @@ export function FeedbackSystem() {
 
 export function useFeedback() {
   const addMessage = useCallback((message: Omit<FeedbackMessage, 'id'>) => {
-    if (typeof window !== 'undefined' && (window as any).showFeedback) {
-      (window as any).showFeedback(message);
+    if (typeof window !== 'undefined' && window.showFeedback) {
+      window.showFeedback(message);
     }
   }, []);
 

@@ -1,6 +1,6 @@
-# ⚡ RUMORR MVP — Command Reference
+# ⚡ RUMOR.RED – Protocolo de Comandos (Acceso a la Matrix)
 
-Copy-paste commands to save time. All commands run from `c:\Users\assi\Desktop\RUMORR`.
+Comandos listos para copiar y pegar. Todos los comandos se ejecutan desde la carpeta raíz del proyecto `RUMOR.RED`.
 
 ---
 
@@ -31,7 +31,7 @@ npm run build
 ---
 
 ### Run production server locally
-```powershell
+```powershell # Ejecutar el script de producción (Protocolo "Unplug")
 npm run start
 ```
 **Output:** Server at http://localhost:3000 (production mode)

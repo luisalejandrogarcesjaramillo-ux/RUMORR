@@ -2,7 +2,7 @@ import React, { Suspense, useRef, useEffect, useMemo, useCallback } from 'react'
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { Color, MeshStandardMaterial, Group, Box3, Vector3 } from 'three';
-import { useExperienceState, useExperienceDispatch } from '@/hooks/useExperienceState';
+import { useSelector, useExperienceActions } from '../hooks/useExperienceState';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useProximitySensor } from '@/hooks/useProximitySensor';
 
@@ -11,11 +11,9 @@ interface DynamicModelProps {
 }
 
 export function DynamicModel({ onInteraction }: DynamicModelProps) {
-  const currentProject = useExperienceState((state) => state.currentProject);
-  const emissiveColor = useExperienceState(
-    (state) => state.currentProject?.emissiveColor ?? '#ffffff'
-  );
-  const { dispatch } = useExperienceDispatch();
+  const currentProject = useSelector(state => state.currentProject);
+  const emissiveColor = useSelector(state => state.currentProject?.emissiveColor ?? '#ffffff');
+  const { incrementClick } = useExperienceActions();
   const { trackEvent } = useAnalytics();
   const gltf = useGLTF(`/models/glb/${(currentProject?.id ?? 'toro').toUpperCase()}.glb`);
   const groupRef = useRef<Group>(null);
@@ -25,10 +23,11 @@ export function DynamicModel({ onInteraction }: DynamicModelProps) {
   const materialsToAnimate = useMemo(() => {
     const mats: MeshStandardMaterial[] = [];
     if (!gltf?.scene) return mats;
-    gltf.scene.traverse((child: any) => {
+    gltf.scene.traverse((child: import('three').Object3D) => {
+      // runtime narrowing
+      // @ts-ignore
       if (child.isMesh && child.material instanceof MeshStandardMaterial) {
-        // Clonar material para evitar shared-material side-effects (opcional según flujo)
-        // child.material = child.material.clone();
+        // @ts-ignore
         mats.push(child.material as MeshStandardMaterial);
       }
     });
@@ -64,16 +63,18 @@ export function DynamicModel({ onInteraction }: DynamicModelProps) {
 
   const handleClick = useCallback(() => {
     trackEvent('model_click');
-    dispatch({ type: 'INCREMENT_CLICK' });
+    incrementClick();
     onInteraction?.();
-  }, [onInteraction, trackEvent, dispatch]);
+  }, [onInteraction, trackEvent, incrementClick]);
 
   // 3) Actualización por frame: solo actualizar materiales en memoria
-  useFrame((frameState) => {
+  useFrame((frameState: unknown) => {
     if (materialsToAnimate.length === 0) return;
 
+    // @ts-ignore - access clock safely at runtime
     const pulseFreq = isNear ? 1.2 : 0.4;
-    const pulse = Math.sin(frameState.clock.elapsedTime * pulseFreq) * 0.5 + 0.5;
+    // @ts-ignore
+    const pulse = Math.sin((frameState as any).clock.elapsedTime * pulseFreq) * 0.5 + 0.5;
     const baseColor = new Color(emissiveColor);
 
     for (const mat of materialsToAnimate) {

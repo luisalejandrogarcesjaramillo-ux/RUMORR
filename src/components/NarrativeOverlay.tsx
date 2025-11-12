@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useExperienceState } from '@/hooks/useExperienceState';
+import { useSelector } from '@/hooks/useExperienceState';
 
 function NarrativeOverlayComponent() {
-  const { state } = useExperienceState();
-  const { currentProject, clickCount } = state;
+  const currentProject = useSelector(state => state.currentProject);
+  const clickCount = useSelector(state => state.clickCount);
 
   if (!currentProject) return null;
 
@@ -18,10 +18,10 @@ function NarrativeOverlayComponent() {
         {!isNarrativeComplete && currentStep && (
           <motion.div
             key={currentStep.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] } }}
-            exit={{ opacity: 0, y: -10, transition: { duration: 0.4, ease: 'easeOut' } }}
-            className="bg-black/50 text-white p-5 rounded-2xl backdrop-blur-lg border border-white/10 shadow-2xl text-center"
+            initial={{ opacity: 0, y: 20 }} // La narrativa "emerge" (Heidegger: Aletheia)
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] } }} // Curva de movimiento personalizada (Gestalt: Continuidad)
+            exit={{ opacity: 0, y: -10, transition: { duration: 0.4, ease: 'easeOut' } }} // Desaparece suavemente
+            className="bg-black/50 text-white p-5 rounded-2xl backdrop-blur-lg border border-white/10 shadow-2xl text-center" // Glassmorfismo (Lowy: Capas de Cristal)
           >
             <h3 className="text-xl font-semibold mb-1 text-white tracking-wide">{currentStep.title}</h3>
             <p className="text-sm text-gray-300 leading-relaxed">{currentStep.description}</p>
