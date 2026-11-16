@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+<title id="title">Un patio y seis hexágonos de cubierta</title>
+<desc id="desc">Diagrama conceptual de siete hexágonos: uno central abierto y seis alrededor. No es una planta del edificio ni está a escala.</desc>
+<rect width="640" height="480" fill="#F2EFE7"/>
+<defs><polygon id="hex" points="56,-32 56,32 0,65 -56,32 -56,-32 0,-65"/></defs>
+<g stroke="#181816" stroke-width="2" fill="#D8C9AE">
+<use href="#hex" x="432" y="230"/><use href="#hex" x="376" y="327"/>
+<use href="#hex" x="264" y="327"/><use href="#hex" x="208" y="230"/>
+<use href="#hex" x="264" y="133"/><use href="#hex" x="376" y="133"/>
+</g>
+<use href="#hex" x="320" y="230" fill="#F2EFE7" stroke="#354F45" stroke-width="3" stroke-dasharray="7 5"/>
+<g font-family="Arial,sans-serif" text-anchor="middle" fill="#181816">
+<text x="320" y="41" font-size="25">UNA UNIDAD / SIETE HEXÁGONOS</text>
+<text x="320" y="227" font-size="23">patio</text><text x="320" y="255" font-size="23">abierto</text>
+<text x="432" y="239" font-size="22">1</text><text x="376" y="336" font-size="22">2</text>
+<text x="264" y="336" font-size="22">3</text><text x="208" y="239" font-size="22">4</text>
+<text x="264" y="142" font-size="22">5</text><text x="376" y="142" font-size="22">6</text>
+<text x="320" y="440" font-size="22">Centro abierto · perímetro cubierto</text>
+</g>
+</svg>

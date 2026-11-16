@@ -1,0 +1,38 @@
+{
+  "id": "2470bc15fd7c48f9aa4dd91e1e6fea66",
+  "credit": "To (+) B",
+  "source": "https://commons.wikimedia.org/wiki/File:Jardin_Botanico-Orquideorama_Arbol-Medellin.jpg",
+  "rights": "licensed",
+  "rights_note": "CC BY 2.0; https://creativecommons.org/licenses/by/2.0/ ; fecha original 2007-01-27; Wikimedia confirma licencia. Uso como imagen de apertura territorial, no ficha editorial. Derivados WebP redimensionados; posible recorte de presentación mediante CSS.",
+  "created_at": "2026-11-13T20:09:21.955928+00:00",
+  "width": 1024,
+  "height": 768,
+  "versions": [
+    {
+      "file": "400.webp",
+      "width": 400,
+      "height": 300,
+      "bytes": 43254
+    },
+    {
+      "file": "800.webp",
+      "width": 800,
+      "height": 600,
+      "bytes": 181882
+    },
+    {
+      "file": "1600.webp",
+      "width": 1024,
+      "height": 768,
+      "bytes": 311264
+    }
+  ],
+  "original_sha256": "e237a2bfb0eef5c82683956d275de897ae095c21ea0af00323871a2d11b58a03",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "photographed_on": "2007-01-27",
+  "consulted_on": "2026-11-13",
+  "subject": "Orquideorama, Jardín Botánico de Medellín",
+  "usage": "Imagen territorial de portada; no entrada del archivo",
+  "changes": "Recodificación WebP y reducción de tamaño; recorte visual CSS"
+}

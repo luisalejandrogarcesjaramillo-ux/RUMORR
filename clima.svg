@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-labelledby="title desc">
+<title id="title">Cubierta, sombra y apertura al cielo</title>
+<desc id="desc">Sección conceptual, sin escala: la cubierta produce sombra y el vacío central deja una apertura para aire y lluvia. No representa cálculos térmicos ni detalles constructivos del Orquideorama.</desc>
+<rect width="640" height="460" fill="#F2EFE7"/>
+<defs><marker id="air" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 8,4 0,8" fill="#93462F"/></marker><marker id="water" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 8,4 0,8" fill="#586D78"/></marker></defs>
+<path d="M45 170 265 135 265 158 45 193Z M375 135 595 170 595 193 375 158Z" fill="#D8C9AE" stroke="#181816" stroke-width="3"/>
+<path d="M190 175 190 340 M450 175 450 340 M40 340 600 340" fill="none" stroke="#181816" stroke-width="4"/>
+<path d="M70 208 240 180 240 333 70 333Z M400 180 570 208 570 333 400 333Z" fill="#D6D2C7"/>
+<path d="M306 290 306 80" fill="none" stroke="#93462F" stroke-width="4" marker-end="url(#air)"/>
+<path d="M345 70 345 275" fill="none" stroke="#586D78" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#water)"/>
+<path d="M290 335Q320 270 355 335" fill="#657052" stroke="#354F45" stroke-width="2"/>
+<g font-family="Arial,sans-serif" fill="#181816" text-anchor="middle">
+<text x="320" y="38" font-size="25">UNA SECCIÓN QUE ADMITE EL CLIMA</text>
+<text x="146" y="278" font-size="25">sombra</text><text x="491" y="278" font-size="25">sombra</text>
+<text x="190" y="109" font-size="22">aire ↑</text><text x="449" y="109" font-size="22">lluvia ↓</text>
+<text x="320" y="405" font-size="22">El vacío también forma parte del diseño</text>
+</g>
+</svg>

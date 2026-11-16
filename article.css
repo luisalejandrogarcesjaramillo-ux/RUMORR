@@ -1,0 +1,51 @@
+[data-record="mujeres-creando"]{--edition-color:var(--sand);--edition-ink:var(--ink)}
+[data-record="cartoneria-judas"]{--edition-color:var(--clay);--edition-ink:var(--white)}
+[data-record="nanduti"]{--edition-color:var(--forest);--edition-ink:var(--white)}
+[data-record="mates-burilados"]{--edition-color:var(--ochre);--edition-ink:var(--ink)}
+[data-record="retablos-ayacuchanos"]{--edition-color:var(--red);--edition-ink:var(--white)}
+[data-record="quinchamali"]{--edition-color:var(--slate);--edition-ink:var(--white)}
+[data-record="barniz-pasto"]{--edition-color:var(--rust);--edition-ink:var(--white)}
+[data-record="fanzines-punk"]{--edition-color:var(--lime);--edition-ink:var(--ink)}
+[data-record="aparelhagens"]{--edition-color:var(--blue);--edition-ink:var(--white)}
+[data-record="picos"]{--edition-color:var(--orange);--edition-ink:var(--ink)}
+/* El color identifica cada lectura; las fotografías conservan su color documental. */
+[data-record="orquideorama"]{--edition-color:var(--red);--edition-ink:var(--white)}
+[data-record="mecedora-momposina"]{--edition-color:var(--sand);--edition-ink:var(--ink)}
+[data-record="rotulacion-popular"]{--edition-color:var(--lime);--edition-ink:var(--ink)}
+[data-record="cesteria-contemporanea"]{--edition-color:var(--forest);--edition-ink:var(--white)}
+[data-record="grafiti-bogota"]{--edition-color:var(--blue);--edition-ink:var(--white)}
+[data-record="musica-y-escucha"]{--edition-color:var(--slate);--edition-ink:var(--white)}
+[data-record="urbanidad"]{--edition-color:var(--ochre);--edition-ink:var(--ink)}
+[data-record="creatividad-2030"]{--edition-color:var(--rust);--edition-ink:var(--white)}
+[data-record="cuerpo-vestido-ciudad"]{--edition-color:var(--clay);--edition-ink:var(--white)}
+[data-record="universo-centro"]{--edition-color:var(--olive);--edition-ink:var(--white)}
+[data-record="sesc-pompeia"]{--edition-color:var(--orange);--edition-ink:var(--ink)}
+[data-record="torres-del-parque"]{--edition-color:var(--clay);--edition-ink:var(--white)}
+[data-record="dieste-atlantida"]{--edition-color:var(--sand);--edition-ink:var(--ink)}
+[data-record="metrocable"]{--edition-color:var(--blue);--edition-ink:var(--white)}
+[data-record="cartografias"]{--edition-color:var(--lime);--edition-ink:var(--ink)}
+[data-record="serigrafia-colectiva"]{--edition-color:var(--red);--edition-ink:var(--white)}
+[data-record="arpilleras"]{--edition-color:var(--rust);--edition-ink:var(--white)}
+[data-record="radio-sutatenza"]{--edition-color:var(--ochre);--edition-ink:var(--ink)}
+[data-record="sonideros"]{--edition-color:var(--forest);--edition-ink:var(--white)}
+[data-record="papel-picado"]{--edition-color:var(--paper);--edition-ink:var(--ink)}
+body[data-record] .essay-cover,body[data-record] .hero-copy{background:var(--edition-color);color:var(--edition-ink)}
+body[data-record] .essay-cover .eyebrow,body[data-record] .hero-copy .eyebrow{color:inherit}
+.essay-list li[data-record]{border-left:6px solid var(--edition-color);padding-left:18px}
+.essay-list li[data-record]:hover,.essay-list li[data-record]:focus-within{background:var(--edition-color);color:var(--edition-ink)}
+.essay-list li[data-record]:hover .essay-number,.essay-list li[data-record]:focus-within .essay-number{color:inherit}
+.article-photo img{max-height:820px;object-fit:contain;background:var(--stone)}
+.article-photo figcaption{max-width:85ch}
+.article-photo figcaption a{text-underline-offset:3px}
+.brand-line{font:12px/1.5 Mono,monospace;margin:20px 0}
+body[data-record] .sources{border-top:6px solid var(--edition-color);padding-top:24px}
+@media(max-width:700px){
+ .essay-list li[data-record]{padding-left:10px;border-left-width:4px}
+ .article-photo img{max-height:620px}
+ .article-photo figcaption{font-size:11px;line-height:1.65}
+}
+
+
+
+.next-reading h2{margin:0 0 24px}.next-reading ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.next-reading li{border-top:1px solid var(--stone);padding-top:18px;min-width:0}.next-reading li a{font:600 clamp(23px,3vw,30px)/1.2 Space,Arial,sans-serif;overflow-wrap:anywhere}.next-reading li p{font-size:16px;line-height:1.55;margin:16px 0 24px}.reading-switch{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0}.reading-switch button{background:none;border:1px solid var(--stone);padding:12px 18px;color:var(--paper);min-height:44px}.reading-switch button[aria-pressed=true]{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+@media(max-width:700px){.next-reading ol{grid-template-columns:1fr;gap:12px}}

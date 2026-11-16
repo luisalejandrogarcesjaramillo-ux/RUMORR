@@ -1,0 +1,26 @@
+[
+  {
+    "file": "orquideorama-vertical.webp",
+    "width": 960,
+    "height": 1280,
+    "author": "einalem",
+    "date": "2011-07-08",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Orquideorama.jpg",
+    "changes": "Redimensionado y convertido a WebP; sin retoque de contenido",
+    "bytes": 473936
+  },
+  {
+    "file": "orquideorama-patio.webp",
+    "width": 1280,
+    "height": 850,
+    "author": "Jorge Láscar",
+    "date": "2010-04-17",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Orchidiarium_-_Medellin_Botanical_Gardens.jpg",
+    "changes": "Redimensionado y convertido a WebP; sin retoque de contenido",
+    "bytes": 366154
+  }
+]

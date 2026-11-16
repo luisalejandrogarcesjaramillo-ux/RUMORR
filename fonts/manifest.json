@@ -1,0 +1,94 @@
+[
+  {
+    "file": "spacegrotesk-SpaceGrotesk-wght.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+    "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "bytes": 136676
+  },
+  {
+    "file": "spacegrotesk-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/OFL.txt",
+    "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+    "bytes": 4495
+  },
+  {
+    "file": "ibmplexsans-IBMPlexSans-wdth-wght.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans/IBMPlexSans%5Bwdth%2Cwght%5D.ttf",
+    "sha256": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3",
+    "bytes": 537244
+  },
+  {
+    "file": "ibmplexsans-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans/OFL.txt",
+    "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+    "bytes": 4456
+  },
+  {
+    "file": "ibmplexmono-IBMPlexMono-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+    "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46",
+    "bytes": 135580
+  },
+  {
+    "file": "ibmplexmono-IBMPlexMono-Medium.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+    "sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
+    "bytes": 136704
+  },
+  {
+    "file": "ibmplexmono-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt",
+    "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+    "bytes": 4456
+  },
+  {
+    "file": "newsreader-Newsreader-opsz-wght.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader%5Bopsz%2Cwght%5D.ttf",
+    "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
+    "bytes": 451664
+  },
+  {
+    "file": "newsreader-Newsreader-Italic-opsz-wght.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader-Italic%5Bopsz%2Cwght%5D.ttf",
+    "sha256": "796668611f80b64d5adf182fde3b6f29ed83b4e7cbec7b96937e84ac01364792",
+    "bytes": 495684
+  },
+  {
+    "file": "newsreader-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/OFL.txt",
+    "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+    "bytes": 4394
+  },
+  {
+    "file": "spacegrotesk-SpaceGrotesk-wght.woff",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+    "derived_from": "spacegrotesk-SpaceGrotesk-wght.ttf",
+    "sha256": "9942267a435cfe39fc76f8bc0c2cb235a99c80c8a348a000846a2285f4c83aec",
+    "bytes": 63324,
+    "changes": "Contenedor WOFF; mismos caracteres, glifos, métricas y ejes de variación. Se conservan los originales TTF y sus licencias OFL."
+  },
+  {
+    "file": "ibmplexsans-IBMPlexSans-wdth-wght.woff",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans/IBMPlexSans%5Bwdth%2Cwght%5D.ttf",
+    "derived_from": "ibmplexsans-IBMPlexSans-wdth-wght.ttf",
+    "sha256": "0c2bb31e98bcae0b57ce98459cffd50265b53ba19d74234646707372c40197aa",
+    "bytes": 291164,
+    "changes": "Contenedor WOFF; mismos caracteres, glifos, métricas y ejes de variación. Se conservan los originales TTF y sus licencias OFL."
+  },
+  {
+    "file": "ibmplexmono-IBMPlexMono-Regular.woff",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+    "derived_from": "ibmplexmono-IBMPlexMono-Regular.ttf",
+    "sha256": "b9b566a3f8083296e050a9f6cf6a9100efe65856d57183aea33ecc1bfe0d276d",
+    "bytes": 56576,
+    "changes": "Contenedor WOFF; mismos caracteres, glifos, métricas y ejes de variación. Se conservan los originales TTF y sus licencias OFL."
+  },
+  {
+    "file": "newsreader-Newsreader-Italic-opsz-wght.woff",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader-Italic%5Bopsz%2Cwght%5D.ttf",
+    "derived_from": "newsreader-Newsreader-Italic-opsz-wght.ttf",
+    "sha256": "294c524688b92289db4bd9d849203439072db77ff58343b8c9d14440ef742df8",
+    "bytes": 303120,
+    "changes": "Contenedor WOFF; mismos caracteres, glifos, métricas y ejes de variación. Se conservan los originales TTF y sus licencias OFL."
+  }
+]
