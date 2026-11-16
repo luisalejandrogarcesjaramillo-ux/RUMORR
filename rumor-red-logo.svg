@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 280" role="img" aria-labelledby="title description">
+  <title id="title">rumor.red</title>
+  <desc id="description">Logotipo editorial de rumor.red</desc>
+  <style>
+    .word { font-family: 'Space Grotesk', 'Arial Black', Arial, sans-serif; font-size: 238px; font-weight: 700; letter-spacing: -18px; }
+    .domain { fill: #ff432a; letter-spacing: -16px; }
+  </style>
+  <text class="word" x="8" y="214" fill="#f2efe7">rumor</text>
+  <circle cx="834" cy="190" r="15" fill="#ff432a"/>
+  <text class="word domain" x="872" y="214">red</text>
+</svg>
