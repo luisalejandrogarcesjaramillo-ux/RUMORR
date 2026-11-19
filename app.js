@@ -149,7 +149,7 @@
       const match = (!selection || row.dataset.selected === 'true') && terms[index].includes(term) && (!field || row.dataset.fields.split('|').includes(field)) && (!department || row.dataset.department === department);
       row.hidden = !match; if (match) count++;
     });
-    document.getElementById('browse-status').textContent = count + (selection ? ' elegidas de ' : ' de ') + rows.length + ' lecturas';
+    document.getElementById('browse-status').textContent = (selection ? 'Selección editorial' : 'Catálogo de lecturas') + (term || field || department ? ' · ' + count + ' resultados' : '');
     views.forEach(button => button.setAttribute('aria-pressed', String((button.dataset.view === 'seleccion') === selection)));
     document.getElementById('browse-empty').hidden = count !== 0;
     const url = new URL(location.href);
