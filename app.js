@@ -41,6 +41,12 @@
     });
   }
   legacySection(); markLocation();
+  const campaign = document.querySelector('.campaign[data-start]');
+  if (campaign && (campaign.dataset.start || campaign.dataset.end)) {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {timeZone:'America/Bogota',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(part => [part.type,part.value]));
+    const today = `${parts.year}-${parts.month}-${parts.day}`;
+    campaign.hidden = (campaign.dataset.start && today < campaign.dataset.start) || (campaign.dataset.end && today > campaign.dataset.end);
+  }
   window.addEventListener('hashchange', () => { legacySection(); markLocation(); });
 
   const form = document.getElementById('submission');
@@ -109,10 +115,6 @@
         button.addEventListener('click', () => show(panels.indexOf(item))); stops.append(button);
       });
       if (restoreFocus) stops.querySelector('[aria-current]').focus({preventScroll: true});
-      const ids = opened();
-      document.getElementById('opened-status').textContent = ids
-        ? panels.filter(item => ids.includes(item.dataset.record)).length + ' de ' + panels.length + ' abiertos en estos recorridos.'
-        : 'El recorrido funciona, pero este navegador no permite conservar tus pasos.';
     }
     choices.forEach(button => button.addEventListener('click', () => show(panels.findIndex(item => item.dataset.thread === button.dataset.threadChoice))));
     next.addEventListener('click', () => show((current + 1) % panels.length));
@@ -122,8 +124,9 @@
       show(panels.indexOf(pool[Math.floor(Math.random() * pool.length)]));
     });
     board.querySelector('.thread-choices').hidden = false; board.querySelector('.thread-tools').hidden = false;
-    const requested = () => panels.findIndex(panel => panel.dataset.record === new URLSearchParams(location.search).get('lectura'));
+    const requested = () => panels.findIndex(panel => panel.dataset.record === (new URLSearchParams(location.search).get('lectura') || document.body.dataset.initialRecord));
     show(Math.max(0, requested())); window.addEventListener('pageshow', () => show(current));
+    window.addEventListener('rummor:feature', event => { const index = panels.findIndex(panel => panel.dataset.record === event.detail); if (index >= 0) show(index); });
     window.addEventListener('popstate', () => show(Math.max(0, requested()))); window.addEventListener('storage', () => show(current));
   }
   const browse = document.getElementById('browse');
@@ -135,15 +138,15 @@
   let selection;
   function readFilters() {
     const params = new URLSearchParams(location.search);
-    for (const key of ['q', 'tema']) browse.elements[key].value = (params.get(key) || '').trim().slice(0, 150);
-    selection = params.get('vista') !== 'todas' && !browse.elements.q.value && !browse.elements.tema.value;
+    for (const key of ['q', 'tema', 'departamento']) if (browse.elements[key]) browse.elements[key].value = (params.get(key) || '').trim().slice(0, 150);
+    selection = params.get('vista') !== 'todas' && !browse.elements.q.value && !browse.elements.tema.value && !browse.elements.departamento?.value;
   }
   readFilters();
   function filter() {
-    const term = normalize(browse.elements.q.value.trim()), field = browse.elements.tema.value;
+    const term = normalize(browse.elements.q.value.trim()), field = browse.elements.tema.value, department = browse.elements.departamento?.value || '';
     let count = 0;
     rows.forEach((row, index) => {
-      const match = (!selection || row.dataset.selected === 'true') && terms[index].includes(term) && (!field || row.dataset.fields.split('|').includes(field));
+      const match = (!selection || row.dataset.selected === 'true') && terms[index].includes(term) && (!field || row.dataset.fields.split('|').includes(field)) && (!department || row.dataset.department === department);
       row.hidden = !match; if (match) count++;
     });
     document.getElementById('browse-status').textContent = count + (selection ? ' elegidas de ' : ' de ') + rows.length + ' lecturas';
@@ -151,8 +154,8 @@
     document.getElementById('browse-empty').hidden = count !== 0;
     const url = new URL(location.href);
     if (selection) url.searchParams.delete('vista'); else url.searchParams.set('vista', 'todas');
-    for (const key of ['q', 'tema']) {
-      const value = browse.elements[key].value.trim();
+    for (const key of ['q', 'tema', 'departamento']) {
+      const value = browse.elements[key]?.value.trim() || '';
       if (value) url.searchParams.set(key, value); else url.searchParams.delete(key);
     }
     replaceURL(url);

@@ -1,0 +1,11 @@
+:root{--paper:#F4F0E8;--white:#FFFDF7;--ink:#141512;--gray:#64635D;--stone:#C8C4B8;--sand:#D4C3A7;--clay:#A9513D;--rust:#913D2E;--ochre:#BF934E;--olive:#65704D;--forest:#2D4A3F;--slate:#516B76;--red:#A12F3D;--orange:#FF432A;--blue:#3158F4;--lime:#DCF25A;--field:440px;--measure:680px}
+body{font-family:Plex,Arial,sans-serif}
+.hero h1,.essay-cover h1,.thread-copy h2,.section h2,.recortes-head h1{font-family:Space,Arial,sans-serif}
+.wrap{padding-inline:48px}
+.wordmark{font-family:Space,Arial,sans-serif;font-size:clamp(40px,6.3vw,92px)}
+.identity h1{font-family:Space,Arial,sans-serif;font-size:clamp(38px,4.9vw,68px)}
+.prose{font-size:19px;line-height:1.62}
+.section{padding-block:36px}
+@media(max-width:700px){.wrap{padding-inline:18px}.article-body{display:block}.wordmark{font-size:clamp(34px,10vw,50px)}}
+.campaign{border-block:2px solid var(--red);padding:24px 0;margin:24px 0 48px;display:grid;grid-template-columns:1fr 2fr;gap:24px}.campaign h2{font:700 30px/1.05 Space,Arial,sans-serif;margin:0}.campaign p{margin:0 0 12px}.campaign small{font:11px Mono,monospace}.campaign a{font-weight:700}@media(max-width:700px){.campaign{grid-template-columns:1fr}}
+body[data-panel-mode=dense] .identity{padding-block:20px 16px}body[data-panel-mode=dense] .thread-choices button{min-height:52px}body[data-panel-mode=dense] .thread-tools{padding-block:8px}body[data-panel-mode=image-led] .thread-panel{grid-template-columns:minmax(0,3fr) minmax(300px,1fr)}body[data-panel-mode=image-led] .thread-panel>figure{grid-template-rows:minmax(480px,1fr) auto}@media(max-width:700px){body[data-panel-mode=image-led] .thread-panel{grid-template-columns:1fr}body[data-panel-mode=image-led] .thread-panel>figure{grid-template-rows:320px auto}}
