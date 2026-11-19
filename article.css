@@ -37,6 +37,9 @@ body[data-record] .essay-cover .eyebrow,body[data-record] .hero-copy .eyebrow{co
 .article-photo img{max-height:820px;object-fit:contain;background:var(--stone)}
 .article-photo figcaption{max-width:85ch}
 .article-photo figcaption a{text-underline-offset:3px}
+.prose blockquote{margin:40px 0;padding:8px 0 8px 28px;border-left:3px solid var(--edition-color,var(--lime));font:italic 22px/1.55 Newsreader,Georgia,serif;color:var(--paper)}
+.prose em{font-family:Newsreader,Georgia,serif;font-size:1.05em;font-style:italic}
+.prose hr{border:0;border-top:1px solid var(--gray);margin:48px 0}
 .brand-line{font:12px/1.5 Mono,monospace;margin:20px 0}
 body[data-record] .sources{border-top:6px solid var(--edition-color);padding-top:24px}
 @media(max-width:700px){

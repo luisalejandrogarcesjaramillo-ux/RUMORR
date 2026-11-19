@@ -70,10 +70,10 @@ textarea{min-height:110px;resize:vertical}
 .footer p{font:11px/1.7 Mono,monospace;max-width:58ch;margin:0}
 .footer a{font-size:12px}
 .footer-links{display:flex;flex-wrap:wrap;gap:12px 24px;max-width:70ch}
-.article-body{display:grid;grid-template-columns:minmax(0,680px) minmax(180px,240px);gap:56px;max-width:1032px;margin:52px auto 64px}
-.prose{font-size:19px;line-height:1.62}
-.prose p{margin:0 0 28px}
-.prose h2{font:600 28px/1.2 Space,Arial,sans-serif;letter-spacing:-.03em;margin:40px 0 24px}
+.article-body{display:grid;grid-template-columns:minmax(0,720px) minmax(180px,240px);gap:64px;max-width:1080px;margin:64px auto 84px}
+.prose{font-size:20px;line-height:1.72;letter-spacing:-.01em}
+.prose p{margin:0 0 32px}
+.prose h2{font:600 30px/1.25 Space,Arial,sans-serif;letter-spacing:-.03em;margin:48px 0 24px;border-top:1px solid var(--gray);padding-top:24px}
 .article-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--mist);padding-top:24px}
 .sources{font-size:13px;line-height:1.7}
 .sources li{margin-bottom:12px}
