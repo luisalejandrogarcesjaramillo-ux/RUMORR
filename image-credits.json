@@ -1858,5 +1858,65 @@
     "changes": "Conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
     "caption": "Inscripción atribuida a Mujeres Creando en Rua dos Anjos, Lisboa, Portugal, 02.07.2024. La localización y atribución proceden de la ficha; no se verificó su ejecución.",
     "alt": "Frase manuscrita atribuida a Mujeres Creando junto a una puerta en Lisboa"
+  },
+  {
+    "article": "arquitectura-cholet",
+    "pageid": 196531359,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Arquitectura_Cholet_en_El_Alto,_La_Paz_Bolivia.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Arquitectura_Cholet_en_El_Alto%2C_La_Paz_Bolivia.jpg",
+    "title": "File:Arquitectura Cholet en El Alto, La Paz Bolivia.jpg",
+    "author": "Jgbmac",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Edificio de arquitectura cholet en El Alto, Bolivia. La fachada combina paneles de aluminio compuesto, vidrios polarizados y motivos geométricos inspirados en los textiles andinos. Foto: Jgbmac · CC BY-SA 4.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "arquitectura-cholet-1-640.webp",
+        "width": 640,
+        "height": 959,
+        "bytes": 85366,
+        "sha256": "80ee16d133cc391437e8d8770db93727d3446ed5ce79b0c76f8aaa6fd26db348"
+      },
+      {
+        "file": "arquitectura-cholet-1-1280.webp",
+        "width": 1280,
+        "height": 1917,
+        "bytes": 272360,
+        "sha256": "3d98d7e9184aa97ba121387d18fea5e6ce4f330bd9f28fc290f46ce53a36c70a"
+      }
+    ]
+  },
+  {
+    "article": "arquitectura-cholet",
+    "pageid": 38515816,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cholet1.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cholet1.jpg",
+    "title": "File:Cholet1.jpg",
+    "author": "Grullab",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Remate superior de un cholet alteño donde se aprecia la vivienda unifamiliar de cubierta a dos aguas construida sobre el salón de fiestas. Foto: Grullab · CC BY-SA 3.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "arquitectura-cholet-2-640.webp",
+        "width": 640,
+        "height": 558,
+        "bytes": 60548,
+        "sha256": "89b5662d3e1183725eecd331a5d61b6642fb337b6d5ef1f2bde613adf7153fdc"
+      },
+      {
+        "file": "arquitectura-cholet-2-1280.webp",
+        "width": 1280,
+        "height": 1117,
+        "bytes": 161646,
+        "sha256": "b45529ffaf129651ab0b63135279ec53be041c77f5a18630f125e0a1444dfbe6"
+      }
+    ]
   }
 ]
