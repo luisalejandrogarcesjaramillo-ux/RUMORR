@@ -4,9 +4,9 @@
   if (!hero) return;
 
   const HEROES = [
-    {slug:'picos',t:'El parlante también tiene pintor',b:'CUADERNO · SONIDO & GRÁFICA · CARIBE COLOMBIANO',d:'Antes de que la música suene, la máquina ya ha dicho quién es. Alguien subió a una escalera con un pincel de cerda fina para pintar una fiera en el cajón de madera: la acústica del barrio que se reconoce primero por los ojos.',a:'Frente del picó El Rojo con cobra pintada'},
+    {slug:'picos',t:'El parlante también tiene pintor',b:'CUADERNO · SONIDO & GRÁFICA · CARIBE COLOMBIANO',d:'El frente pintado permite reconocer un picó antes de oírlo. Letras, colores y figuras hacen visible una identidad construida junto al sonido.',a:'Frente del picó El Rojo con cobra pintada'},
     {slug:'barniz-pasto',t:'Una piel que se corta, no se pinta',b:'CUADERNO · OFICIOS & MATERIALES · PASTO, COLOMBIA',d:'Llaman barniz a lo que en verdad es una resina vegetal masticada con paciencia campesina, templada al calor de las manos y cortada al milímetro sobre la madera. Un saber que no empieza en el taller visible, sino en la selva.',a:'Gilberto Granja trabajando barniz de Pasto'},
-    {slug:'quinchamali',t:'La aguja dejó el disco y entró en la greda',b:'CUADERNO · MATERIALES & OFICIOS · ÑUBLE, CHILE',d:'Una vieja aguja de vitrola, en vez de gastar discos ajenos, encontró su lugar en la greda aún tibia. Luego vendrán el humo y la bosta para volver negra la tierra, dejando que la incisión blanca brille como una memoria quieta.',a:'Alfarería negra de Quinchamalí con incisiones blancas'},
+    {slug:'quinchamali',t:'La aguja dejó el disco y entró en la greda',b:'CUADERNO · MATERIALES & OFICIOS · ÑUBLE, CHILE',d:'Una aguja de vitrola abre líneas antes de la cocción. El humo oscurece la pieza; el colo blanco hace visibles los surcos después.',a:'Alfarería negra de Quinchamalí con incisiones blancas'},
     {slug:'fanzines-punk',t:'Antes del enlace estaba la fotocopia',b:'CUADERNO · PUBLICACIONES · MEDELLÍN',d:'Hubo un tiempo en que la única red social posible era una fotocopia doblada en cuatro, manchada de tinta barata y pasada de mano en mano al pie de una tarima. La urgencia de decir algo cuando la ciudad parecía empeñada en no escuchar.',a:'Fotocopiadora Xerox y mesa de fanzine'},
     {slug:'sonideros',t:'El barrio tiene una voz amplificada',b:'CUADERNO · SONIDO & ESPACIO PÚBLICO · CIUDAD DE MÉXICO',d:'En medio del asfalto y de la noche, una voz amplificada manda saludos a los ausentes, a los que cruzaron la frontera, a los que bailan bajo la luz de un poste. La terquedad comunitaria de fundar una plaza donde no había más que cemento.',a:'Baile sonidero en Ciudad de México'},
     {slug:'arpilleras',t:'Coser lo que no cabía en la noticia',b:'CUADERNO · OFICIOS & MEMORIA · CHILE',d:'Cuando la palabra fue prohibida y el miedo vigilaba las esquinas, las mujeres recogieron los retazos viejos de los pantalones y los manteles para coser con aguja e hilo la verdad que los periódicos callaban.',a:'Detalle de arpillera chilena testimonial'},
@@ -18,7 +18,7 @@
     {slug:'chicha-afiches',t:'El grito de fósforo sobre el cemento',b:'CUADERNO · GRÁFICA & TIPOGRAFÍA · LIMA, PERÚ',d:'Sobre la bruma y las paredes de adobe de Lima, la migración andina imprimió un alfabeto de tintas fosforescentes que no pide permiso para existir.',a:'Muro tapizado con carteles chicha y tipografía fosforescente en Lima'},
     {slug:'luchalibre-mascaras',t:'La piel sagrada del anonimato',b:'CUADERNO · CULTURA POPULAR & OBJETOS · MÉXICO',d:'En un sótano de barrio, un sastre corta retazos de vinil y charol para coser una segunda piel que nunca mostrará las fatigas del rostro civil.',a:'Colección de máscaras de lucha libre en un puesto popular de la Ciudad de México'},
     {slug:'antropologia-del-remiendo',t:'La dignidad obstinada del remiendo',b:'CUADERNO · OFICIOS & MATERIALES · AMÉRICA LATINA',d:'Antes de que el mercado decretara que las cosas nacen para ser arrojadas a la basura, las manos populares inventaron una sabiduría del alambre y el parche.',a:'Zapatero remendón en su taller artesanal en 1903'},
-    {slug:'sombrero-vueltiao',t:'La espiral de caña y el cosmos zenú',b:'CUADERNO · MATERIALES & OFICIOS · CÓRDOBA, COLOMBIA',d:'En las sabanas calientes, las tejedoras zenúes deshojan la caña flecha y la sumergen en lodo negro para tejer una espiral que se dobla sin quebrarse.',a:'Sombrero vueltiao tradicional del pueblo Zenú'}
+    {slug:'sombrero-vueltiao',t:'La espiral de caña y el cosmos zenú',b:'CUADERNO · MATERIALES & OFICIOS · CÓRDOBA, COLOMBIA',d:'En las sabanas calientes, las tejedoras zenúes deshojan la caña flecha y la sumergen en lodo negro para tejer una espiral que se dobla sin quebrarse.',a:'Sombrero vueltiao tradicional del pueblo Zenú'},
     {slug:'hamacas-wayuu',t:'El territorio mental del telar vertical',b:'CUADERNO · MATERIALES & OFICIOS · LA GUAJIRA, COLOMBIA/VENEZUELA',d:'Telar vertical y geometría de hilos: el habitar suspendido del pueblo Wayúu.',a:'Chinchorro tradicional wayuu tejido a mano en telar vertical'},
     {slug:'cuchilleria-gaucha',t:'El acero forjado en la soledad pampeana',b:'CUADERNO · OBJETOS & OFICIOS · LAS PAMPAS, ARGENTINA/URUGUAY',d:'Facón criollo y elástico de carreta: el acero forjado en la inmensidad pampeana.',a:'Retrato histórico de un gaucho a caballo con facón cruzado en el cinto'},
     {slug:'vajilla-peltre',t:'La memoria desconchada del metal esmaltado',b:'CUADERNO · OBJETOS & MATERIALES · AMÉRICA LATINA',d:'Acero vitrificado y esmalte desconchado: la memoria cotidiana de la vajilla de peltre.',a:'Pocillo tradicional de peltre esmaltado con borde contrastante'},
@@ -45,6 +45,7 @@
     'fanzines-punk': {slug:'fanzines-punk',t:'Antes del enlace estaba la fotocopia',m:'PUBLICACIONES · MEDELLÍN',d:'El computador convivía con la fotocopia: la urgencia de poner una voz en la calle sin pedir permiso.',a:'Fotocopiadora y mesa de fanzine'}
   };
 
+  const featured = new Set(['picos', 'barniz-pasto', 'quinchamali', 'rotulacion-popular', 'arpilleras', 'chicha-afiches', 'luchalibre-mascaras']);
   let currentSlug = 'picos';
 
   function updateSides(chosenSlug) {
@@ -61,7 +62,7 @@
       if (meta) meta.textContent = s.m;
       const h3 = card.querySelector('h3');
       if (h3) h3.textContent = s.t;
-      const p = card.querySelector('p');
+      const p = card.querySelector('div > p:last-child');
       if (p) p.textContent = s.d;
     });
   }
@@ -74,8 +75,9 @@
     });
     const img = hero.querySelector('img');
     if (img) {
-      img.src = item.slug + '-1-1280.webp';
-      img.srcset = item.slug + '-1-640.webp 640w, ' + item.slug + '-1-1280.webp 960w';
+      const arpillera = item.slug === 'arpilleras';
+      img.src = arpillera ? 'arpilleras-muestra-651.webp' : item.slug + '-1-1280.webp';
+      img.srcset = arpillera ? 'arpilleras-muestra-480.webp 480w, arpilleras-muestra-651.webp 651w' : item.slug + '-1-640.webp 640w, ' + item.slug + '-1-1280.webp 960w';
       img.alt = item.a;
     }
     const badge = hero.querySelector('.hero-badge');
@@ -88,7 +90,7 @@
   }
 
   function pickHero(forceDifferent) {
-    const pool = forceDifferent ? HEROES.filter(h => h.slug !== currentSlug) : HEROES;
+    const pool = HEROES.filter(h => featured.has(h.slug) && (!forceDifferent || h.slug !== currentSlug));
     applyHero(pool[Math.floor(Math.random() * pool.length)]);
   }
 
@@ -97,5 +99,5 @@
     pickHero(true);
   });
 
-  pickHero(false);
+  applyHero(HEROES[0]);
 })();
