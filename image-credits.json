@@ -2098,5 +2098,65 @@
         "sha256": "2c3dd6ff38171e58b61f04477388ad68d8856392d025de7c3211e6cb718eacef"
       }
     ]
+  },
+  {
+    "article": "sombrero-vueltiao",
+    "pageid": 188403832,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Antiguo_sombrero_vueltiao.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Antiguo_sombrero_vueltiao.jpg",
+    "title": "File:Antiguo sombrero vueltiao.jpg",
+    "author": "Hurluberlue",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Sombrero vueltiao tradicional del pueblo Zenú. Las vueltas concéntricas de caña flecha tejida combinan tiras blancas naturales y tiras negras teñidas en fango aluvial. Foto: Hurluberlue · CC BY-SA 4.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "sombrero-vueltiao-1-640.webp",
+        "width": 640,
+        "height": 659,
+        "bytes": 127588,
+        "sha256": "69edd79a4b9e6b5ecfb7cbb7c5ca78a9412a5df545aeb9729a432f64e94fedd9"
+      },
+      {
+        "file": "sombrero-vueltiao-1-1280.webp",
+        "width": 1280,
+        "height": 1319,
+        "bytes": 392498,
+        "sha256": "c3e63a284ad02bb4996b38a2b1d27020d82f94c38afe3c75f7f039b4c60935c0"
+      }
+    ]
+  },
+  {
+    "article": "sombrero-vueltiao",
+    "pageid": 33643695,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sombrero_vueltiao_close.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sombrero_vueltiao_close.jpg",
+    "title": "File:Sombrero vueltiao close.jpg",
+    "author": "Camilo Sanchez",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Detalle macro del trenzado de caña flecha en un sombrero vueltiao fino. Cada pinta geométrica representa un elemento de la fauna, la flora y la cosmogonía de la ciénaga caribeña. Foto: Camilo Sanchez · CC BY-SA 3.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "sombrero-vueltiao-2-640.webp",
+        "width": 640,
+        "height": 306,
+        "bytes": 57500,
+        "sha256": "7b20eb266f1288005ecc4b736b01f9870f7a626f83b6bc94f21958947a77c1a3"
+      },
+      {
+        "file": "sombrero-vueltiao-2-1280.webp",
+        "width": 1280,
+        "height": 612,
+        "bytes": 173072,
+        "sha256": "0f5c375a69e6742b71e266f3050b7182a5c767bc2bb794baa6f7a669cfa7a436"
+      }
+    ]
   }
 ]
