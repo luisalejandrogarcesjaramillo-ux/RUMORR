@@ -1918,5 +1918,65 @@
         "sha256": "b45529ffaf129651ab0b63135279ec53be041c77f5a18630f125e0a1444dfbe6"
       }
     ]
+  },
+  {
+    "article": "chicha-afiches",
+    "pageid": 80476453,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Carteles_chicha.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Carteles_chicha.jpg",
+    "title": "File:Carteles chicha.jpg",
+    "author": "Lucía Calderon Portugal",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Muro cubierto de carteles chicha en Lima. La superposición de capas y la fluorescencia del fucsia y el amarillo limón desafían el gris costero de la capital peruana. Foto: Lucía Calderon Portugal · CC BY-SA 2.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "chicha-afiches-1-640.webp",
+        "width": 640,
+        "height": 384,
+        "bytes": 120608,
+        "sha256": "9097564cca53b781baae19bf016fbdb08ab1210769a5bd8e633b4dd5fb8b4b53"
+      },
+      {
+        "file": "chicha-afiches-1-1280.webp",
+        "width": 1280,
+        "height": 768,
+        "bytes": 329362,
+        "sha256": "9d4e377c33956adda73a4bc944d879d988cbf963c0e6fefdb9e3c3fd8fca0758"
+      }
+    ]
+  },
+  {
+    "article": "chicha-afiches",
+    "pageid": 127196669,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cartel_chicha_invitando_a_concierto_por_fin_de_a%C3%B1o_que_se_llevar%C3%A1_a_cabo_en_Puente_Piedra.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Cartel_chicha_invitando_a_concierto_por_fin_de_a%C3%B1o_que_se_llevar%C3%A1_a_cabo_en_Puente_Piedra.jpg",
+    "title": "File:Cartel chicha invitando a concierto por fin de año que se llevará a cabo en Puente Piedra.jpg",
+    "author": "QM Keen",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Cartel tipográfico chicha anunciando fiesta popular en el distrito de Puente Piedra, al norte de Lima. Cada bloque cromático y línea de sombra se estampa manualmente a través de mallas serigráficas. Foto: QM Keen · CC BY-SA 4.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "chicha-afiches-2-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 53672,
+        "sha256": "6e586d9afddf54ca0442e5a198d007f90499bfca63f7275b8dd4538613065cfd"
+      },
+      {
+        "file": "chicha-afiches-2-1280.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 136614,
+        "sha256": "af3685e691161b2b45d87d5c2dba9069fe2f256595fe2acd3cf464890222ef49"
+      }
+    ]
   }
 ]
