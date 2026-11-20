@@ -104,3 +104,19 @@
 
 
 
+
+
+/* ── Field Notes Banner ─────────────────────────────────────────────── */
+.field-notes-banner{margin:56px 0 0;border-top:3px solid var(--red);padding-top:0}
+.fnb-inner{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto auto;gap:0 48px;align-items:start;padding:40px 0 48px;max-width:1180px}
+.fnb-eyebrow{grid-column:1/-1;font:11px/1.5 Mono,monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--stone);margin:0 0 20px}
+.fnb-lead{grid-column:1;grid-row:2;font:500 clamp(20px,2vw,26px)/1.45 Space,Arial,sans-serif;letter-spacing:-.02em;margin:0;max-width:52ch}
+.fnb-cta{grid-column:2;grid-row:2;align-self:center;display:inline-block;font:700 14px/1 Mono,monospace;letter-spacing:.03em;text-decoration:none;text-transform:uppercase;padding:18px 28px;background:var(--red);color:var(--white);white-space:nowrap;transition:background .15s,color .15s;min-height:44px}
+.fnb-cta:hover{background:var(--paper);color:var(--ink)}
+.fnb-note{grid-column:1/-1;grid-row:3;font:11px/1.6 Mono,monospace;color:var(--stone);margin:20px 0 0}
+@media(max-width:700px){
+  .fnb-inner{grid-template-columns:1fr;padding:32px 0 40px;gap:0}
+  .fnb-lead{max-width:100%;margin-bottom:28px}
+  .fnb-cta{grid-column:1;grid-row:3;justify-self:start}
+  .fnb-note{grid-row:4;margin-top:16px}
+}
