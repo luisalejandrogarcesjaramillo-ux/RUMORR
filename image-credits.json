@@ -1978,5 +1978,65 @@
         "sha256": "af3685e691161b2b45d87d5c2dba9069fe2f256595fe2acd3cf464890222ef49"
       }
     ]
+  },
+  {
+    "article": "luchalibre-mascaras",
+    "pageid": 17979803,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lucha_libre_m%C3%A1scaras.JPG",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lucha_libre_m%C3%A1scaras.JPG",
+    "title": "File:Lucha libre máscaras.JPG",
+    "author": "Jonathan McIntosh",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Colección de máscaras de lucha libre en un puesto popular de la Ciudad de México. El satén, el vinil y las costuras reforzadas dan forma a las distintas identidades míticas del pancracio. Foto: Jonathan McIntosh · CC BY-SA 3.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "luchalibre-mascaras-1-640.webp",
+        "width": 640,
+        "height": 424,
+        "bytes": 94566,
+        "sha256": "0139dabb8891c5626cf983cd8f5486e178a559fb725e870452d7adc3709119fd"
+      },
+      {
+        "file": "luchalibre-mascaras-1-1280.webp",
+        "width": 1280,
+        "height": 848,
+        "bytes": 268628,
+        "sha256": "cbad478a220e9ee8cec6ee396d70cc9a2f097e16f29a9dc60319952467be27d9"
+      }
+    ]
+  },
+  {
+    "article": "luchalibre-mascaras",
+    "pageid": 90016513,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mascara_lucha_libre_mexicana.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mascara_lucha_libre_mexicana.jpg",
+    "title": "File:Mascara lucha libre mexicana.jpg",
+    "author": "Octavio Bonilla",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Máscara artesanal de lucha libre mexicana. Las aplicaciones de charol en los ojos y la boca delimitan la expresión del personaje sobre el molde de tela ajustado a la cabeza. Foto: Octavio Bonilla · CC BY-SA 4.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "luchalibre-mascaras-2-640.webp",
+        "width": 640,
+        "height": 878,
+        "bytes": 34222,
+        "sha256": "1af7237cfa5f717bccfd5a21ac2c29799fb1c113478c6da74b6d6b4d8024f7b5"
+      },
+      {
+        "file": "luchalibre-mascaras-2-1280.webp",
+        "width": 1280,
+        "height": 1757,
+        "bytes": 85186,
+        "sha256": "1f443cb0efa4a814d6b67ee94271e32f5eac7388c1ab95ab306166e1683e76b9"
+      }
+    ]
   }
 ]
