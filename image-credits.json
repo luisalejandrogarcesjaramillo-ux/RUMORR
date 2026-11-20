@@ -2038,5 +2038,65 @@
         "sha256": "1f443cb0efa4a814d6b67ee94271e32f5eac7388c1ab95ab306166e1683e76b9"
       }
     ]
+  },
+  {
+    "article": "antropologia-del-remiendo",
+    "pageid": 45511299,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Zapatero_remendon_1903.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Zapatero_remendon_1903.jpg",
+    "title": "File:Zapatero remendon 1903.jpg",
+    "author": "Carlos Tornero",
+    "date_as_recorded": "2026-11-16",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "caption": "Zapatero remendón en su taller artesanal en Santiago de Chile, 1903. Con lezna, martillo y horma de hierro, el artesano prolonga la vida útil del calzado popular. Registro histórico: Carlos Tornero · Dominio público.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "antropologia-del-remiendo-1-640.webp",
+        "width": 640,
+        "height": 383,
+        "bytes": 72400,
+        "sha256": "0cfa60ae4da03016bcd8a05592901c6f46a0c48e632182a5b7d68030cfb3a4ba"
+      },
+      {
+        "file": "antropologia-del-remiendo-1-1280.webp",
+        "width": 767,
+        "height": 459,
+        "bytes": 99224,
+        "sha256": "436f938abf0815fd957cf5ae53a8788a0491bf6c5177eca59b4d529ac724e113"
+      }
+    ]
+  },
+  {
+    "article": "antropologia-del-remiendo",
+    "pageid": 43607199,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Reparaci%C3%B3n_de_bicicleta.JPG",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Reparaci%C3%B3n_de_bicicleta.JPG",
+    "title": "File:Reparación de bicicleta.JPG",
+    "author": "Clemartial",
+    "date_as_recorded": "2026-11-16",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Reparación cotidiana de una bicicleta en taller de barrio. El ajuste manual y el parcheo de cámaras garantizan la movilidad popular sin depender de repuestos importados. Foto: Clemartial · CC BY-SA 4.0.",
+    "consulted": "2026-11-16",
+    "changes": "Orientación EXIF, conversión a WebP y redimensionado proporcional, sin recorte ni retoque de contenido.",
+    "files": [
+      {
+        "file": "antropologia-del-remiendo-2-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 42760,
+        "sha256": "354959fffa9b367bcd345d13e60a9426f3ac9e94d179a37eea000f77be59f6e4"
+      },
+      {
+        "file": "antropologia-del-remiendo-2-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "bytes": 135550,
+        "sha256": "2c3dd6ff38171e58b61f04477388ad68d8856392d025de7c3211e6cb718eacef"
+      }
+    ]
   }
 ]
